@@ -7,3 +7,8 @@ class user:
 
     def save_user(self):
         user.user_list.append(self)
+    def delete_user(self):
+        user.user_list.remove(self)
+    @classmethod
+    def display_users(cls):
+        return cls.user_list
