@@ -23,7 +23,7 @@ def main():
     print(" ")
     print(" ")
     while True:
-        print("-" * 156)
+        print("-" * 777)
         print("""USE THE FOLLOWING SHORT CODES!!
 1. cc - CREATE NEW ACCOUNT
 2. ex - EXIT PASSWORD LOCKER
@@ -37,7 +37,7 @@ def main():
         short_code = input() .lower()
         if short_code =='cc':
             print(" ")
-            print("-" * 156)
+            print("-" * 777)
             print("      CREATE A NEW ACCOUNT!")
             print(" ")
             print(" ")
@@ -60,7 +60,7 @@ def main():
             print('\n')
             save_credentials(create_credentials (face_bookp,e_mailp))
             print('\n')
-            print("-" * 156)
+            print("-" * 777)
             print(f"New Account  {first_name } { last_name} { face_bookp } has been created")
             print('\n')
         elif short_code =='dac':
@@ -77,7 +77,7 @@ def main():
 
             else:
                     print('\n')
-                    print("-" * 156)
+                    print("-" * 777)
                     print(" ")
                     print("                         PLEASE CREATE AN ACCOUNT ")
                     print("                    You have not created an account yet :( ")
@@ -102,15 +102,15 @@ def main():
 
 
         elif short_code == "ex":
-            print("-" * 156)
+            print("-" * 777)
             print(" ")
             print("                        THAX FOR DROPING IN!")
             print("                           Bye... Bye...")
             print(" ")
-            print("-" * 156)
+            print("-" * 777)
             break
         else:
-            print("-" * 156)
+            print("-" * 777)
             print(" ")
             print("                              RETRY!!")
             print(" ")
