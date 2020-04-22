@@ -44,7 +44,7 @@ def main():
             print("what is your first name?..")
             print(" ")
             first_name =input()
-            print("What is your middle name?..")
+            print("What is your last name?..")
             print(" ")
             last_name= input()
             print("what is your email address?..")
@@ -104,8 +104,8 @@ def main():
         elif short_code == "ex":
             print("-" * 777)
             print(" ")
-            print("                        THAX FOR DROPING IN!")
-            print("                           Bye... Bye...")
+            print("                        THANKS FOR DROPING IN!")
+            print("                           Bye...!!! Bye...!!!")
             print(" ")
             print("-" * 777)
             break
