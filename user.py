@@ -1,14 +1,38 @@
-class user:
-    user_list = []
-    def __init__(self,first_name,last_name,email):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.email = email
+
+class User:
+    '''
+    Class that generates new instances of user
+    '''
+    user_list = []  # list of users to be stored here
+
+    def __init__(self, username, password):
+        '''
+        saving user credentials into user_list for login
+        '''
+        self.username = username
+        self.password = password
+
+## to save multiple users
 
     def save_user(self):
-        user.user_list.append(self)
+        User.user_list.append(self)
+
+## to Delete User
+
     def delete_user(self):
-        user.user_list.remove(self)
+        '''
+        delete a user account
+        '''
+        User.user_list.remove(self)
+
+
+        ##for Find User
+
     @classmethod
-    def display_users(cls):
-        return cls.user_list
+    def find_user(cls, username):
+        '''
+        find username using search terms
+        '''
+        for user in cls.user_list:
+            if user.username == username:
+                return  user

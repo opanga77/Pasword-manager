@@ -1,19 +1,71 @@
-class Info:
-    info_list = []
+import pyperclip
+class Credentials:
+    '''
+    class that creates instaces of user accounts
+    '''
+    cred_list = []
 
-    def __init__(self,face_bookp,email_p):
-        self.face_bookp =face_bookp
-        self.email_p = email_p
+##we Assign propety to credentil list
+    def __init__(self, account , email , passlock):
+    
+        self.account = account
+        self.email = email
+        self.passlock = passlock
 
-#the function below saves credentias
-    def save_info(self):
-        Info.info_list.append(self)
 
-#the function below deletes credentials
-    def delete_info(self):
-        Info.info_list.remove(self)
+        ##to save credentials
 
-#below here class mothod used to involve the whole class and displays it
+    def save_cred(self):
+        '''
+        self credentials in cred_list
+        '''
+        Credentials.cred_list.append(self)
+
+        ##to Delete credentils
+
+    def delete_cred(self):
+        '''
+        delete credentials 
+        '''
+        Credentials.cred_list.remove(self)    
+
+        ##to search for credentials
+
     @classmethod
-    def display_info(cls):
-        return cls.info_list
+    def find_account(cls, account):
+        '''
+        search for accounts
+        '''
+        for cred in cls.cred_list:
+            if cred.account == account:
+                return cred    
+
+       ##to confirm credentials
+
+    @classmethod
+    def cred_exists(cls, account):
+        '''
+        confirm a class actually exists
+        '''
+        for cred in cls.cred_list:
+            if cred.account == account:
+                return True
+        return False            
+
+
+     ##to display credentials
+
+    @classmethod
+    def display_cred(cls):
+        '''
+        method that returns all credentials
+        '''
+        return cls.cred_list
+
+    ##copy password
+
+
+    @classmethod
+    def copy_passlock(cls, passlock):
+            find_account = Credentials.find_account(passlock)
+            pyperclip.copy(find_account.passlock)  
